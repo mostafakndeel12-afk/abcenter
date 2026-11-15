@@ -129,6 +129,8 @@ a.card.link:hover{border-color:var(--brand)}
 .band{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
 .band .cta{margin-top:0}
 .footnav{display:flex;gap:18px;flex-wrap:wrap}.footnav a{color:#BFD3D3;text-decoration:none}
+.video-box{max-width:960px;margin:0 auto;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 30px 60px -30px rgba(15,42,51,.45);background:#0F2A33}
+.video-box video{display:block;width:100%;height:auto;aspect-ratio:16/9}
 /* responsive */
 @media (max-width:980px){
  h1{font-size:40px} h2{font-size:30px}
@@ -191,6 +193,10 @@ a.card.link:hover{border-color:var(--brand)}
    <span class="pill"><span class="ar">تم الحجز</span><span class="en">Booked</span></span>
   </div>
  </div>
+</div></section>
+<section class="alt video-sec"><div class="wrap">
+ <div class="head" style="text-align:center;margin-bottom:32px"><p class="eyebrow"><span class="ar">رحلة المريض</span><span class="en">The patient journey</span></p><h2><span class="ar">من المكالمة إلى الموعد، خطوة بخطوة</span><span class="en">From the call to the appointment, step by step</span></h2></div>
+ <div class="video-box"><video src="abcenter-patient-journey.mp4" poster="abcenter-patient-journey-poster.jpg" controls playsinline preload="metadata"></video></div>
 </div></section>
 <section class="dark" aria-labelledby="sla-h"><div class="wrap">
  <div class="head"><p class="eyebrow"><span class="ar">التزاماتنا</span><span class="en">Our commitments</span></p><h2 id="sla-h"><span class="ar">خمسة مؤشرات نُحاسَب عليها في كل تقرير</span><span class="en">Five numbers we answer for in every report</span></h2></div>
