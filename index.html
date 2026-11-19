@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){var t;try{t=localStorage.getItem('abc-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();</script>
 <meta name="description" content="ABCenter مركز حجز المواعيد: كول سنتر وحجز مواعيد عن بُعد للمجمعات الطبية والمستوصفات والعيادات والمستشفيات في السعودية.">
 <title>ABCenter – مركز حجز المواعيد</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20124%20124%22%20width%3D%22124%22%20height%3D%22124%22%3E%3Cg%20transform%3D%22translate%282%2C2%29%20scale%281%29%22%3E%0A%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%22104%22%20height%3D%2296%22%20rx%3D%2220%22%20fill%3D%22%23157A6E%22/%3E%0A%3Cpath%20d%3D%22M28%2018h64a20%2020%200%200%201%2020%2020v8H8v-8a20%2020%200%200%201%2020-20z%22%20fill%3D%22%230F2A33%22/%3E%0A%3Crect%20x%3D%2230%22%20y%3D%226%22%20width%3D%2212%22%20height%3D%2226%22%20rx%3D%226%22%20fill%3D%22%23F0A66E%22/%3E%0A%3Crect%20x%3D%2278%22%20y%3D%226%22%20width%3D%2212%22%20height%3D%2226%22%20rx%3D%226%22%20fill%3D%22%23F0A66E%22/%3E%0A%3Cg%20transform%3D%22translate%2831.2%2C51.2%29%20scale%282.4%29%22%3E%3Cpath%20fill%3D%22%23F6F8F6%22%20d%3D%22M6.62%2010.79c1.44%202.83%203.76%205.14%206.59%206.59l2.2-2.2c.27-.27.67-.36%201.02-.24%201.12.37%202.33.57%203.57.57.55%200%201%20.45%201%201V20c0%20.55-.45%201-1%201-9.39%200-17-7.61-17-17%200-.55.45-1%201-1h3.5c.55%200%201%20.45%201%201%200%201.25.2%202.45.57%203.57.11.35.03.74-.25%201.02l-2.2%202.2z%22/%3E%3C/g%3E%0A%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@500..800&family=Tajawal:wght@400;500;700&display=swap">
 <style>
-:root{--brand:#157A6E;--brand-strong:#0F5F55;--brand-tint:#D7ECE8;--ink:#0F2A33;--body:#44545A;--muted:#5E6E74;--surface:#F6F8F6;--surface-alt:#E6EEEB;--card:#FDFEFD;--line:#D3DEDA;--accent:#F0A66E;--on-brand:#F6F8F6;--r-sm:8px;--r-md:14px;--r-lg:20px;--display:"Cairo",Tahoma,Arial,sans-serif;--text:"Tajawal","Cairo",Tahoma,Arial,sans-serif}
+:root{--brand:#157A6E;--brand-strong:#0F5F55;--brand-tint:#D7ECE8;--ink:#0F2A33;--body:#44545A;--muted:#5E6E74;--surface:#F6F8F6;--surface-alt:#E6EEEB;--card:#FDFEFD;--line:#D3DEDA;--accent:#F0A66E;--on-brand:#F6F8F6;--deep:#0F2A33;--head-bg:rgba(246,248,246,.94);--r-sm:8px;--r-md:14px;--r-lg:20px;--display:"Cairo",Tahoma,Arial,sans-serif;--text:"Tajawal","Cairo",Tahoma,Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--surface);color:var(--body);font-family:var(--text);font-size:17px;line-height:1.7}
@@ -24,7 +26,7 @@ a{color:var(--brand)}
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 section{padding:88px 0}
 .alt{background:var(--surface-alt)}
-.dark{background:var(--ink);color:#BFD3D3}
+.dark{background:var(--deep);color:#BFD3D3}
 .dark h2,.dark h3{color:#F3F6F4}
 .eyebrow{font-family:var(--display);font-weight:700;font-size:15px;color:var(--brand);margin-bottom:10px;letter-spacing:.3px}
 .dark .eyebrow{color:#5CC4B5}
@@ -32,7 +34,7 @@ section{padding:88px 0}
 .dark .lead{color:#BFD3D3}
 .head{margin-bottom:44px}
 /* header */
-header{position:sticky;top:0;z-index:10;background:rgba(246,248,246,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:10;background:var(--head-bg);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;gap:28px;height:76px}
 .logo svg{height:46px;width:auto;display:block}
 .nav nav{display:flex;gap:24px;margin-inline-start:auto}
@@ -52,7 +54,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(246,248,246,.94);backdro
 .served{margin-top:14px;font-family:var(--display);font-weight:700;font-size:17px;color:var(--brand)}
 .trust{margin-top:28px;font-size:15px;color:var(--muted)}
 .mock{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 24px 48px -28px rgba(15,42,51,.35)}
-.mock-top{background:var(--ink);color:#F3F6F4;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-weight:700}
+.mock-top{background:var(--deep);color:#F3F6F4;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-weight:700}
 .mock-top small{color:#9DB3B5;font-weight:500;font-family:var(--text)}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;padding:20px 22px}
 .cal span{aspect-ratio:1.25;border-radius:var(--r-sm);background:var(--brand-tint)}
@@ -100,7 +102,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(246,248,246,.94);backdro
 /* pricing */
 .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .plan{position:relative;display:flex;flex-direction:column}.plan .btn{margin-top:auto;justify-content:center;text-align:center}.plan .price small{display:block;margin-top:2px}.plan .price{font-size:42px}
-.badge{position:absolute;top:-13px;inset-inline-start:24px;background:var(--accent);color:var(--ink);font-family:var(--display);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px}
+.badge{position:absolute;top:-13px;inset-inline-start:24px;background:var(--accent);color:#0F2A33;font-family:var(--display);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px}
 .plan.main{border:2px solid var(--brand)}
 .price{font-family:var(--display);font-weight:800;font-size:46px;color:var(--brand);margin:10px 0 2px;line-height:1.2}
@@ -139,6 +141,15 @@ a.card.link:hover{border-color:var(--brand)}
 .footnav{display:flex;gap:18px;flex-wrap:wrap}.footnav a{color:#BFD3D3;text-decoration:none}
 .video-box{max-width:960px;margin:0 auto;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 30px 60px -30px rgba(15,42,51,.45);background:#0F2A33}
 .video-box video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+html[data-theme="dark"]{color-scheme:dark;--brand:#22917F;--brand-strong:#6FD0C1;--brand-tint:#173F3B;--ink:#E9F1EF;--body:#B9C8C8;--muted:#90A4A6;--surface:#0D1D22;--surface-alt:#11262D;--card:#152C34;--line:#26434C;--deep:#081419;--head-bg:rgba(13,29,34,.92)}
+html[data-theme="dark"] .eyebrow,html[data-theme="dark"] .served,html[data-theme="dark"] .more{color:#5CC4B5}
+html[data-theme="dark"] .price{color:#5CC4B5}
+html[data-theme="dark"] .btn.ghost{color:#5CC4B5;border-color:#2BA391}html[data-theme="dark"] .btn.primary:hover{background:#1B7D6E;border-color:#1B7D6E}
+html[data-theme="dark"] .mock{box-shadow:0 24px 48px -28px rgba(0,0,0,.7)}
+html[data-theme="dark"] .logo path[fill="#0F2A33"]{fill:#F6F8F6}html[data-theme="dark"] .logo svg path:first-of-type{fill:#BFD3D3}html[data-theme="dark"] .logo path[fill="#157A6E"]{fill:#5CC4B5}html[data-theme="dark"] .logo path[fill="#5E6E74"]{fill:#BFD3D3}
+.theme{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:var(--r-md);width:40px;height:38px;display:grid;place-items:center;cursor:pointer;padding:0}
+.theme svg{width:18px;height:18px}html[data-theme="dark"] .theme .moon,html:not([data-theme="dark"]) .theme .sun{display:none}
+body,header,section,.card,.mock,input{transition:background-color .25s,border-color .25s,color .25s}
 /* fill the screen + scale on large displays */
 body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 main{flex:1 0 auto;display:flex;flex-direction:column}
@@ -157,9 +168,9 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
  .stats{grid-template-columns:repeat(2,1fr)}
  .grid3{grid-template-columns:1fr 1fr}
  .grid4,.flow,.timeline,.plans{grid-template-columns:1fr 1fr}
- .nav{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:8px;row-gap:8px}
+ .nav{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:8px;row-gap:8px;column-gap:10px}
  .nav nav{order:3;width:100%;margin:0;overflow-x:auto;gap:20px;white-space:nowrap;padding:4px 0 6px}
- .lang{margin-inline-start:auto}
+ .theme{margin-inline-start:auto}
 }
 @media (max-width:620px){
  section{padding:64px 0}
@@ -190,7 +201,8 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
   <a href="#pricing" data-nav="pricing"><span class="ar">الباقات</span><span class="en">Pricing</span></a>
   <a href="#contact" data-nav="contact"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a>
  </nav>
- <button class="lang" id="lang" type="button"><span class="ar">English</span><span class="en">العربية</span></button>
+<button class="theme" id="theme" type="button" aria-label="Dark mode" title="الوضع الليلي / Dark mode"><svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor" stroke="none"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
+  <button class="lang" id="lang" type="button"><span class="ar">English</span><span class="en">العربية</span></button>
  <a class="btn primary small" href="#contact"><span class="ar">اطلب عرضًا</span><span class="en">Get a proposal</span></a>
 </div></header>
 
@@ -401,6 +413,11 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
   document.querySelectorAll('[data-nav]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-nav')===h)});
   window.scrollTo(0,0);}
  window.addEventListener('hashchange',route);route();
+ var TB=document.getElementById('theme'),MQ=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):null;
+ function theme(t,save){root.setAttribute('data-theme',t);TB.setAttribute('aria-pressed',t==='dark');if(save){try{localStorage.setItem('abc-theme',t)}catch(e){}}}
+ TB.addEventListener('click',function(){theme(root.getAttribute('data-theme')==='dark'?'light':'dark',true)});
+ if(MQ&&MQ.addEventListener)MQ.addEventListener('change',function(e){var sv;try{sv=localStorage.getItem('abc-theme')}catch(x){}if(!sv)theme(e.matches?'dark':'light')});
+ theme(root.getAttribute('data-theme')||'light');
  document.getElementById('lang').addEventListener('click',function(){set(root.getAttribute('data-lang')==='ar'?'en':'ar')});
  var F=document.getElementById('f'),FB=document.getElementById('fb'),OK=document.getElementById('fm-ok'),ER=document.getElementById('fm-err');
  F.addEventListener('submit',function(e){e.preventDefault();
