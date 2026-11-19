@@ -125,7 +125,7 @@ label{display:block;font-family:var(--display);font-weight:600;font-size:14px;co
 input,textarea{width:100%;border:1px solid var(--line);border-radius:var(--r-sm);padding:11px 13px;font:inherit;font-size:15px;background:var(--surface);color:var(--ink)}
 textarea{min-height:90px;resize:vertical}
 form .btn{margin-top:18px;width:100%;justify-content:center}
-.formmsg{margin-top:14px;font-size:15px;color:var(--brand-strong);display:none}
+.formmsg{margin-top:14px;font-size:15px;color:var(--brand-strong);display:none}.formmsg.err{color:#B4442E}
 footer{background:#0A1E25;color:#9DB3B5;padding:44px 0;font-size:14px}
 .foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .foot svg{height:58px;width:auto}
@@ -367,8 +367,10 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
   <label for="c"><span class="ar">اسم المنشأة الطبية</span><span class="en">Healthcare facility</span></label><input id="c" required>
   <label for="p"><span class="ar">رقم الجوال</span><span class="en">Mobile number</span></label><input id="p" type="tel" required dir="ltr">
   <label for="v"><span class="ar">عدد المكالمات اليومية تقريبًا</span><span class="en">Approximate daily calls</span></label><input id="v" inputmode="numeric" dir="ltr">
-  <button class="btn primary" type="submit"><span class="ar">جهّز الطلب</span><span class="en">Prepare request</span></button>
-  <p class="formmsg" id="fm"><span class="ar">لم يُرسل الطلب بعد: انسخ التفاصيل وأرسلها لنا على واتساب أو البريد الموضّح.</span><span class="en">Not sent yet: copy the details and send them to us on WhatsApp or by email.</span></p>
+  <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+  <button class="btn primary" type="submit" id="fb"><span class="ar">إرسال الطلب</span><span class="en">Send request</span></button>
+  <p class="formmsg" id="fm-ok" role="status"><span class="ar">تم استلام طلبك، وسنتواصل معك خلال يوم عمل.</span><span class="en">Request received. We will contact you within one business day.</span></p>
+  <p class="formmsg err" id="fm-err" role="alert"><span class="ar">تعذّر إرسال الطلب. حاول مرة أخرى أو تواصل معنا على واتساب.</span><span class="en">Could not send. Please try again or reach us on WhatsApp.</span></p>
  </form>
 </div></section></div>
 </main>
@@ -400,10 +402,16 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
   window.scrollTo(0,0);}
  window.addEventListener('hashchange',route);route();
  document.getElementById('lang').addEventListener('click',function(){set(root.getAttribute('data-lang')==='ar'?'en':'ar')});
- document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
-  var t=['ABCenter','Name: '+n.value,'Facility: '+c.value,'Mobile: '+p.value,'Daily calls: '+v.value].join('\n');
-  var m=document.getElementById('fm');m.style.display='block';
-  if(navigator.clipboard){navigator.clipboard.writeText(t).catch(function(){})}});
+ var F=document.getElementById('f'),FB=document.getElementById('fb'),OK=document.getElementById('fm-ok'),ER=document.getElementById('fm-err');
+ F.addEventListener('submit',function(e){e.preventDefault();
+  if(F.botcheck.checked)return;
+  OK.style.display='none';ER.style.display='none';FB.disabled=true;FB.style.opacity=.6;
+  var d={access_key:'0b3cecde-b606-4406-b4cf-41868c897cb6',subject:'طلب عرض جديد من الموقع – '+c.value,from_name:'ABCenter Website',
+   'الاسم':n.value,'المنشأة':c.value,'الجوال':p.value,'عدد المكالمات اليومية':v.value||'-','لغة الصفحة':root.getAttribute('data-lang')};
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(d)})
+   .then(function(r){return r.json()}).then(function(j){if(j&&j.success){OK.style.display='block';F.reset()}else{ER.style.display='block'}})
+   .catch(function(){ER.style.display='block'})
+   .then(function(){FB.disabled=false;FB.style.opacity=1});});
 })();
 </script>
 </body>
