@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<script>(function(){var r=document.documentElement,c=null;try{c=localStorage.getItem('abc-lang-choice')}catch(e){}var L=(navigator.languages&&navigator.languages.length?navigator.languages[0]:navigator.language)||'';var l=(c==='ar'||c==='en')?c:(/^ar\b/i.test(L)?'ar':'en');r.setAttribute('data-lang',l);r.lang=l;r.dir=l==='ar'?'rtl':'ltr'})();</script>
 <script>(function(){var t;try{t=localStorage.getItem('abc-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();</script>
 <meta name="description" content="ABCenter مركز حجز المواعيد: كول سنتر وحجز مواعيد عن بُعد للمجمعات الطبية والمستوصفات والعيادات والمستشفيات في السعودية.">
 <title>ABCenter – مركز حجز المواعيد</title>
@@ -548,9 +549,10 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
  function set(l){root.setAttribute('data-lang',l);root.lang=l;root.dir=l==='ar'?'rtl':'ltr';
   var V=document.getElementById('pjv');if(V&&V.getAttribute('src')!==V.dataset[l]){V.pause();V.setAttribute('poster',V.dataset[l+'Poster']);V.setAttribute('src',V.dataset[l]);V.load()}
   document.title=l==='ar'?'ABCenter – مركز حجز المواعيد':'ABCenter – Appointment Booking Center';
-  try{localStorage.setItem('abc-lang',l)}catch(e){}}
- var start='ar';try{start=localStorage.getItem('abc-lang')||'ar'}catch(e){}
- set(start);
+  }
+ function pick(){var c=null;try{c=localStorage.getItem('abc-lang-choice')}catch(e){}if(c==='ar'||c==='en')return c;
+  var L=(navigator.languages&&navigator.languages.length?navigator.languages[0]:navigator.language)||'';return /^ar\b/i.test(L)?'ar':'en'}
+ set(pick());
  var routes=['home','services','how-it-works','reports','pricing','contact'];
  function route(){var h=(location.hash||'').slice(1);if(routes.indexOf(h)<0)h='home';
   document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-page')===h)});
@@ -584,7 +586,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
   function count(el){if(!el)return;var t=el.childNodes.length===1&&el.firstChild.nodeType===3?el.firstChild:null;if(!t)return;var m=t.nodeValue.match(/^(\d+)(.*)$/);if(!m)return;
    var to=+m[1],suf=m[2],st=null;function f(ts){if(!st)st=ts;var k=Math.min((ts-st)/900,1);k=1-Math.pow(1-k,3);t.nodeValue=Math.round(to*k)+suf;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
  })();
- document.getElementById('lang').addEventListener('click',function(){set(root.getAttribute('data-lang')==='ar'?'en':'ar')});
+ document.getElementById('lang').addEventListener('click',function(){var l=root.getAttribute('data-lang')==='ar'?'en':'ar';set(l);try{localStorage.setItem('abc-lang-choice',l)}catch(e){}});
  var F=document.getElementById('f'),FB=document.getElementById('fb'),OK=document.getElementById('fm-ok'),ER=document.getElementById('fm-err');
  F.addEventListener('submit',function(e){e.preventDefault();
   if(F.botcheck.checked)return;
