@@ -9,9 +9,10 @@
 <title>ABCenter – مركز حجز المواعيد</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20124%20124%22%20width%3D%22124%22%20height%3D%22124%22%3E%3Cg%20transform%3D%22translate%282%2C2%29%20scale%281%29%22%3E%0A%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%22104%22%20height%3D%2296%22%20rx%3D%2220%22%20fill%3D%22%23157A6E%22/%3E%0A%3Cpath%20d%3D%22M28%2018h64a20%2020%200%200%201%2020%2020v8H8v-8a20%2020%200%200%201%2020-20z%22%20fill%3D%22%230F2A33%22/%3E%0A%3Crect%20x%3D%2230%22%20y%3D%226%22%20width%3D%2212%22%20height%3D%2226%22%20rx%3D%226%22%20fill%3D%22%23F0A66E%22/%3E%0A%3Crect%20x%3D%2278%22%20y%3D%226%22%20width%3D%2212%22%20height%3D%2226%22%20rx%3D%226%22%20fill%3D%22%23F0A66E%22/%3E%0A%3Cg%20transform%3D%22translate%2831.2%2C51.2%29%20scale%282.4%29%22%3E%3Cpath%20fill%3D%22%23F6F8F6%22%20d%3D%22M6.62%2010.79c1.44%202.83%203.76%205.14%206.59%206.59l2.2-2.2c.27-.27.67-.36%201.02-.24%201.12.37%202.33.57%203.57.57.55%200%201%20.45%201%201V20c0%20.55-.45%201-1%201-9.39%200-17-7.61-17-17%200-.55.45-1%201-1h3.5c.55%200%201%20.45%201%201%200%201.25.2%202.45.57%203.57.11.35.03.74-.25%201.02l-2.2%202.2z%22/%3E%3C/g%3E%0A%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@500..800&family=Tajawal:wght@400;500;700&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300..700&display=swap">
 <style>
-:root{--brand:#157A6E;--brand-strong:#0F5F55;--brand-tint:#D7ECE8;--ink:#0F2A33;--body:#44545A;--muted:#5E6E74;--surface:#F6F8F6;--surface-alt:#E6EEEB;--card:#FDFEFD;--line:#D3DEDA;--accent:#F0A66E;--on-brand:#F6F8F6;--deep:#0F2A33;--head-bg:rgba(246,248,246,.94);--r-sm:8px;--r-md:14px;--r-lg:20px;--display:"Cairo",Tahoma,Arial,sans-serif;--text:"Tajawal","Cairo",Tahoma,Arial,sans-serif}
+:root{--brand:#157A6E;--brand-strong:#0F5F55;--brand-tint:#D7ECE8;--ink:#0F2A33;--body:#44545A;--muted:#5E6E74;--surface:#F6F8F6;--surface-alt:#E6EEEB;--card:#FDFEFD;--line:#D3DEDA;--accent:#F0A66E;--on-brand:#F6F8F6;--deep:#0F2A33;--head-bg:rgba(246,248,246,.94);--r-sm:8px;--r-md:14px;--r-lg:20px;--display:"Readex Pro",Tahoma,Arial,sans-serif;--text:"Readex Pro",Tahoma,Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--surface);color:var(--body);font-family:var(--text);font-size:17px;line-height:1.7}
@@ -150,6 +151,146 @@ html[data-theme="dark"] .logo path[fill="#0F2A33"]{fill:#F6F8F6}html[data-theme=
 .theme{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:var(--r-md);width:40px;height:38px;display:grid;place-items:center;cursor:pointer;padding:0}
 .theme svg{width:18px;height:18px}html[data-theme="dark"] .theme .moon,html:not([data-theme="dark"]) .theme .sun{display:none}
 body,header,section,.card,.mock,input{transition:background-color .25s,border-color .25s,color .25s}
+/* ===== redesign 2026-11 ===== */
+body{font-size:17.5px;line-height:1.85;font-weight:400;font-feature-settings:"tnum" 1}
+h1,h2,h3{font-weight:600;letter-spacing:-.2px}
+h1{font-size:clamp(38px,5.2vw,64px);line-height:1.12;font-weight:700}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.2}
+h3{font-size:19px;line-height:1.35}
+html[data-lang="en"] h1,html[data-lang="en"] h2{letter-spacing:-.8px}html[data-lang="en"] h1{font-size:clamp(36px,4.2vw,54px)}
+.lead{max-width:60ch;font-weight:300;font-size:19px}
+.hero p.lead{font-size:20px}
+section{padding:104px 0}
+.head{margin-bottom:48px;max-width:900px}h1,h2{text-wrap:balance}
+.eyebrow{display:none}
+.hero .eyebrow{display:block;font-weight:500;font-size:16px;color:var(--brand);margin-bottom:18px;letter-spacing:0}
+.nav nav a,.btn,.lang,label,summary,.served,.more,.badge,.pill{font-weight:500}
+.btn{font-weight:600;border-radius:10px;padding:14px 26px}
+.btn.small{padding:9px 16px}
+.lang,.theme{border-radius:10px}
+.served{font-size:16px;margin-top:20px}
+.trust{font-size:15px;margin-top:22px}
+/* hero board */
+.hero{padding:72px 0 112px}
+.hero-grid{grid-template-columns:.95fr 1.05fr;gap:64px}
+.board{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 30px 60px -40px rgba(15,42,51,.45)}
+.board-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:18px 22px;background:var(--deep);color:#F3F6F4}
+.board-top>b{font-weight:600;font-size:17px}
+.count{font-size:14px;color:#9DB3B5}.count b{font-size:22px;color:var(--accent);font-weight:700;margin-inline-end:2px}
+.bgrid{display:grid;grid-template-columns:56px repeat(3,1fr);gap:6px;padding:18px 22px 10px}
+.bh{font-size:13px;font-weight:500;color:var(--muted);text-align:center;padding-bottom:4px}
+.bt{font-size:12.5px;color:var(--muted);align-self:center;direction:ltr;text-align:center}
+.sl{height:30px;border-radius:6px;background:var(--surface-alt);border:1px dashed var(--line)}
+.sl.b{background:var(--brand);border-color:transparent}
+.sl.flash{background:var(--accent);border-color:transparent;transform:scale(1.04)}
+.sl{transition:background-color .35s,transform .35s}
+.ticker{display:flex;align-items:center;gap:14px;margin:8px 22px 22px;padding:14px 16px;border-radius:12px;background:var(--brand-tint)}
+.ring{width:40px;height:40px;border-radius:50%;background:var(--brand);display:grid;place-items:center;flex:none}
+.ring svg{width:20px;height:20px}
+.tk b{display:block;font-weight:600;color:var(--ink);font-size:15px}
+.tk small{color:var(--body);font-size:13.5px}
+.ticker .pill{opacity:0;transition:opacity .3s;background:var(--card)}.hero h1+.lead{margin-top:26px}.ticker.done .pill{opacity:1}
+.ticker.live .ring{animation:ring 1s ease-in-out 2}
+@keyframes ring{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg)}40%{transform:rotate(12deg)}60%{transform:rotate(-8deg)}80%{transform:rotate(6deg)}}
+@media (prefers-reduced-motion:reduce){.sl,.ticker .pill{transition:none}.ticker.live .ring{animation:none}}
+/* quieter surfaces: fewer boxes */
+.card,.plan,.step,details{border-radius:12px}
+.card{padding:28px}
+.card .icon{width:44px;height:44px;border-radius:10px}
+.note{border-radius:12px}
+/* services as a ruled list */
+[data-page="services"] .grid4{grid-template-columns:1fr 1fr;gap:0 56px}
+[data-page="services"] .grid4 .card{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:26px 0 30px;display:grid;grid-template-columns:44px 1fr;column-gap:18px}
+[data-page="services"] .grid4 .card .icon{grid-row:1/3;margin:2px 0 0}
+[data-page="services"] .grid4 .card p{max-width:46ch}
+/* how-it-works steps: a connected sequence */
+.flow{gap:0;border-top:1px solid var(--line)}
+.flow .step{background:none;border:0;border-radius:0;padding:24px 18px 8px 18px;border-inline-start:1px solid var(--line)}
+.flow .step:first-child{border-inline-start:0;padding-inline-start:0}
+.step .n{width:30px;height:30px;font-size:14px;font-weight:600}
+/* stats */
+.stat .num{font-weight:600;font-size:clamp(32px,3.4vw,44px);letter-spacing:-1px;white-space:nowrap}
+.stats{gap:0}.stat{padding-inline:18px;border-inline-start:1px solid #24414A}.stat:first-child{border-inline-start:0;padding-inline-start:0}
+/* pricing */
+.plan{padding:30px 26px}
+.price{font-weight:600;font-size:44px;letter-spacing:-1px}
+.plan.main{box-shadow:0 30px 60px -40px rgba(21,122,110,.6)}
+html[data-theme="dark"] .board{box-shadow:0 30px 60px -40px rgba(0,0,0,.8)}
+html[data-theme="dark"] .sl:not(.b):not(.flash){background:#10252B}
+html[data-theme="dark"] .stat{border-color:#1C353D}
+@media (max-width:980px){.hero-grid{gap:48px}.stats{gap:24px 0}.stat:nth-child(odd){border-inline-start:0;padding-inline-start:0}.flow .step{border-inline-start:0;padding-inline:0;border-bottom:1px solid var(--line)}.flow{border-top:0}}
+@media (max-width:620px){[data-page="services"] .grid4{grid-template-columns:1fr}.bgrid{grid-template-columns:44px repeat(3,1fr);padding:14px}.sl{height:24px}.board-top,.ticker{margin-inline:14px}.board-top{margin:0;padding:14px}.stat{border-inline-start:0;padding-inline:0}section{padding:72px 0}}
+/* ===== UX pass ===== */
+:focus-visible{outline:3px solid #F0A66E;outline-offset:3px;border-radius:6px}
+input:focus-visible{outline-offset:0}
+.skip{position:absolute;inset-inline-start:12px;top:-60px;z-index:50;background:var(--brand);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.skip:focus{top:12px}
+.lang,.theme{min-height:44px}.theme{width:44px}.lang{padding:8px 16px}
+.nav nav a{padding:10px 2px}
+input{min-height:48px;font-size:16px}
+input[aria-invalid="true"]{border-color:#C2462E;box-shadow:0 0 0 1px #C2462E}
+.ferr{display:none;color:#B4442E;font-size:14px;margin-top:6px}
+html[data-theme="dark"] .ferr,html[data-theme="dark"] .formmsg.err{color:#F08A74}
+input[aria-invalid="true"]+.ferr{display:block}
+.hint{font-size:13.5px;color:var(--muted);margin-top:6px}
+.formmsg{border-radius:10px;padding:12px 14px;background:var(--brand-tint)}
+.formmsg.err{background:rgba(194,70,46,.1)}
+#fb[aria-busy="true"]{cursor:progress}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:28px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:10px;height:10px;border-right:2px solid var(--brand);border-bottom:2px solid var(--brand);transform:rotate(45deg);transition:transform .2s;flex:none;margin-top:-4px}
+details[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+/* mobile action bar */
+.mbar{display:none}
+@media (max-width:620px){
+ .mbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;position:fixed;inset-inline:0;bottom:0;z-index:20;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--head-bg);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+ .mbar a{min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--ink);background:var(--card)}
+ .mbar a.go{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+ .mbar svg,.mbar img{width:20px;height:20px}
+ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+ html.on-contact .mbar{display:none}html.on-contact body{padding-bottom:0}
+ .nav nav a{padding:8px 4px}
+}
+@media (prefers-reduced-motion:reduce){summary::after{transition:none}html{scroll-behavior:auto}}
+/* ===== motion + clearer boxes ===== */
+:root{--line-strong:#BCD3CC}
+html[data-theme="dark"]{--line-strong:#2F5560}
+.card,.plan,.step,details,.board,form,.note{border:1.5px solid var(--line-strong)}
+.note{background:var(--brand-tint)}
+.card,.plan,details{box-shadow:0 1px 2px rgba(15,42,51,.06)}
+[data-page="services"] .grid4{gap:18px}
+[data-page="services"] .grid4 .card{background:var(--card);border:1.5px solid var(--line-strong);border-radius:12px;padding:24px}
+.flow{gap:14px;border-top:0}
+.flow .step{background:var(--card);border:1.5px solid var(--line-strong);border-radius:12px;padding:22px 18px}
+.flow .step:first-child{padding-inline-start:18px;border-inline-start:1.5px solid var(--line-strong)}
+.sec .card{border-color:#2F5560}
+/* hover: answer the pointer */
+.card,.plan,.flow .step,details,.btn,.cbtn a,.mbar a{transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s,border-color .25s,background-color .25s,color .25s}
+@media (hover:hover){
+ .card:hover,.plan:hover,.flow .step:hover{transform:translateY(-4px);border-color:var(--brand);box-shadow:0 18px 36px -22px rgba(21,122,110,.55)}
+ details:hover{border-color:var(--brand)}
+ .btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px -12px rgba(21,122,110,.7)}
+ .sec .card:hover{border-color:#5CC4B5}
+}
+.btn:active,.mbar a:active,.cbtn a:active{transform:translateY(0) scale(.97)}
+.card .icon{transition:transform .3s}
+@media (hover:hover){.card:hover .icon{transform:scale(1.08) rotate(-4deg)}}
+/* scroll reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.page.on .hero-grid>div:first-child>*{animation:rise .7s cubic-bezier(.2,.7,.3,1) both}
+.page.on .hero-grid>div:first-child>*:nth-child(2){animation-delay:.08s}
+.page.on .hero-grid>div:first-child>*:nth-child(3){animation-delay:.16s}
+.page.on .hero-grid>div:first-child>*:nth-child(4){animation-delay:.24s}
+.page.on .hero-grid>div:first-child>*:nth-child(5){animation-delay:.32s}
+.page.on .hero-grid>div:first-child>*:nth-child(6){animation-delay:.4s}
+.page.on .board{animation:rise .8s .2s cubic-bezier(.2,.7,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+/* timeline bar draws in */
+.ms{position:relative;border-top-color:var(--line-strong)}
+.ms::before{content:"";position:absolute;top:-4px;inset-inline-start:0;height:4px;width:0;background:var(--brand);transition:width .8s cubic-bezier(.2,.7,.3,1);transition-delay:var(--d,0s)}
+.ms.in::before,.ms:not(.rv)::before{width:100%}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.page.on .hero-grid>div:first-child>*,.page.on .board{animation:none}.ms::before{transition:none;width:100%}.card:hover,.plan:hover,.flow .step:hover,.btn:hover{transform:none}}
 /* fill the screen + scale on large displays */
 body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 main{flex:1 0 auto;display:flex;flex-direction:column}
@@ -186,6 +327,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
 </style>
 </head>
 <body>
+<a class="skip" href="#top"><span class="ar">تخطَّ إلى المحتوى</span><span class="en">Skip to content</span></a>
 <header><div class="wrap nav">
  <a class="logo" href="#home" aria-label="ABCenter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477 160" width="477" height="160"><g transform="translate(6,10) scale(1)">
 <rect x="8" y="18" width="104" height="96" rx="20" fill="#157A6E"/>
@@ -206,7 +348,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
  <a class="btn primary small" href="#contact"><span class="ar">اطلب عرضًا</span><span class="en">Get a proposal</span></a>
 </div></header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 <div class="page" data-page="home"><section class="hero"><div class="wrap hero-grid">
  <div>
   <p class="eyebrow"><span class="ar">كول سنتر وحجز مواعيد للمنشآت الطبية</span><span class="en">Call centre &amp; appointment booking for healthcare facilities</span></p>
@@ -217,16 +359,12 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
    <a class="btn primary" href="#contact"><span class="ar">احجز اجتماعًا تعريفيًا</span><span class="en">Book an intro call</span></a>
    <a class="btn ghost" href="#how-it-works"><span class="ar">كيف نعمل</span><span class="en">See how it works</span></a>
   </div>
-  <p class="trust"><span class="ar">من دوام واحد حتى تغطية على مدار الساعة · تفعيل خلال أسبوعين</span><span class="en">From one shift to round-the-clock cover · Live within two weeks</span></p>
+  <p class="trust"><span class="ar">من دوام واحد حتى تغطية على مدار الساعة، والتفعيل خلال أسبوعين</span><span class="en">From one shift to round-the-clock cover, live within two weeks</span></p>
  </div>
- <div class="mock" aria-hidden="true">
-  <div class="mock-top"><span><span class="ar">جدول المواعيد</span><span class="en">Appointments</span></span><small><span class="ar">هذا الأسبوع</span><span class="en">This week</span></small></div>
-  <div class="cal"><span class=""></span><span class="on"></span><span class=""></span><span class="on"></span><span class="on"></span><span class=""></span><span class=""></span><span class=""></span><span class="on"></span><span class="on"></span><span class="booked"></span><span class="on"></span><span class="on"></span><span class=""></span><span class=""></span><span class="on"></span><span class=""></span><span class="on"></span><span class="on"></span><span class=""></span><span class=""></span></div>
-  <div class="call">
-   <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="#F6F8F6"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
-   <div><b><span class="ar">مكالمة واردة · عيادة الأسنان</span><span class="en">Incoming call · Dental clinic</span></b><small><span class="ar">حُجز الموعد على نظامكم خلال المكالمة</span><span class="en">Booked on your system during the call</span></small></div>
-   <span class="pill"><span class="ar">تم الحجز</span><span class="en">Booked</span></span>
-  </div>
+ <div class="board" aria-hidden="true">
+  <div class="board-top"><b><span class="ar">مواعيد اليوم</span><span class="en">Today's appointments</span></b><span class="count"><b id="bk">31</b> <span class="ar">موعدًا محجوزًا</span><span class="en">booked</span></span></div>
+  <div class="bgrid"><span class="bh"></span><span class="bh"><span class="ar">أسنان</span><span class="en">Dental</span></span><span class="bh"><span class="ar">جلدية</span><span class="en">Derma</span></span><span class="bh"><span class="ar">أطفال</span><span class="en">Paeds</span></span><span class="bt">9:00</span><span class="sl b"></span><span class="sl b"></span><span class="sl"></span><span class="bt">9:30</span><span class="sl b"></span><span class="sl" data-n="1" data-doc="1" data-t="9:30"></span><span class="sl b"></span><span class="bt">10:00</span><span class="sl"></span><span class="sl b"></span><span class="sl" data-n="3" data-doc="2" data-t="10:00"></span><span class="bt">10:30</span><span class="sl" data-n="2" data-doc="0" data-t="10:30"></span><span class="sl b"></span><span class="sl b"></span><span class="bt">11:00</span><span class="sl b"></span><span class="sl"></span><span class="sl" data-n="5" data-doc="2" data-t="11:00"></span><span class="bt">11:30</span><span class="sl" data-n="4" data-doc="0" data-t="11:30"></span><span class="sl b"></span><span class="sl"></span><span class="bt">12:00</span><span class="sl b"></span><span class="sl" data-n="6" data-doc="1" data-t="12:00"></span><span class="sl"></span></div>
+  <div class="ticker"><span class="ring"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="#F6F8F6"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span><span class="tk"><b><span class="ar">مكالمة واردة</span><span class="en">Incoming call</span></b><small id="tk"><span class="ar">جارٍ الحجز على نظام المنشأة</span><span class="en">Booking on your system</span></small></span><span class="pill" id="tkp"><span class="ar">تم الحجز</span><span class="en">Booked</span></span></div>
  </div>
 </div></section>
 <section class="alt video-sec"><div class="wrap">
@@ -373,15 +511,15 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
    <div class="ci"><div><small><span class="ar">البريد الإلكتروني</span><span class="en">Email</span></small><b class="mail"><span class="mi"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="#5CC4B5"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M4 8l8 5 8-5" fill="none" stroke="#1E4A4A" stroke-width="2"/></svg></span><a href="mailto:info@abcentersa.com" dir="ltr" style="color:inherit">info@abcentersa.com</a></b></div></div>
   </div>
  </div>
- <form id="f">
+ <form id="f" novalidate>
   <h3><span class="ar">أو أرسل طلبًا وسيتم التواصل معك</span><span class="en">Or send a request and we'll get back to you</span></h3>
-  <label for="n"><span class="ar">الاسم</span><span class="en">Name</span></label><input id="n" required>
-  <label for="c"><span class="ar">اسم المنشأة الطبية</span><span class="en">Healthcare facility</span></label><input id="c" required>
-  <label for="p"><span class="ar">رقم الجوال</span><span class="en">Mobile number</span></label><input id="p" type="tel" required dir="ltr">
-  <label for="v"><span class="ar">عدد المكالمات اليومية تقريبًا</span><span class="en">Approximate daily calls</span></label><input id="v" inputmode="numeric" dir="ltr">
+  <label for="n"><span class="ar">الاسم</span><span class="en">Name</span></label><input id="n" name="name" required autocomplete="name" aria-describedby="n-e"><p class="ferr" id="n-e"><span class="ar">اكتب اسمك.</span><span class="en">Enter your name.</span></p>
+  <label for="c"><span class="ar">اسم المنشأة الطبية</span><span class="en">Healthcare facility</span></label><input id="c" name="facility" required autocomplete="organization" aria-describedby="c-e"><p class="ferr" id="c-e"><span class="ar">اكتب اسم المنشأة الطبية.</span><span class="en">Enter the facility name.</span></p>
+  <label for="p"><span class="ar">رقم الجوال</span><span class="en">Mobile number</span></label><input id="p" name="phone" type="tel" required dir="ltr" autocomplete="tel" inputmode="tel" aria-describedby="p-e"><p class="ferr" id="p-e"><span class="ar">اكتب رقم الجوال بالأرقام.</span><span class="en">Enter your mobile number in digits.</span></p>
+  <label for="v"><span class="ar">عدد المكالمات اليومية تقريبًا</span><span class="en">Approximate daily calls</span></label><input id="v" name="calls" inputmode="numeric" dir="ltr" placeholder="100" aria-describedby="v-h"><p class="hint" id="v-h"><span class="ar">اختياري، ويساعدنا على اقتراح الباقة المناسبة.</span><span class="en">Optional. Helps us suggest the right plan.</span></p>
   <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
   <button class="btn primary" type="submit" id="fb"><span class="ar">إرسال الطلب</span><span class="en">Send request</span></button>
-  <p class="formmsg" id="fm-ok" role="status"><span class="ar">تم استلام طلبك، وسنتواصل معك خلال يوم عمل.</span><span class="en">Request received. We will contact you within one business day.</span></p>
+  <p class="formmsg" id="fm-ok" role="status" tabindex="-1"><span class="ar">تم استلام طلبك، وسنتواصل معك خلال يوم عمل.</span><span class="en">Request received. We will contact you within one business day.</span></p>
   <p class="formmsg err" id="fm-err" role="alert"><span class="ar">تعذّر إرسال الطلب. حاول مرة أخرى أو تواصل معنا على واتساب.</span><span class="en">Could not send. Please try again or reach us on WhatsApp.</span></p>
  </form>
 </div></section></div>
@@ -399,6 +537,11 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
  <p><span class="ar">© 2026 ABCenter · مركز حجز المواعيد للمنشآت الطبية في المملكة العربية السعودية</span><span class="en">© 2026 ABCenter · Appointment booking for healthcare facilities in Saudi Arabia</span></p>
 </div></footer>
 
+<nav class="mbar" aria-label="تواصل سريع / Quick contact">
+ <a href="tel:+201070697017"><svg viewBox="0 0 24 24" fill="#157A6E" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span class="ar">اتصال</span><span class="en">Call</span></a>
+ <a href="https://wa.me/201070697017" target="_blank" rel="noopener"><img src="wa.png" alt="" width="20" height="20"><span class="ar">واتساب</span><span class="en">WhatsApp</span></a>
+ <a class="go" href="#contact"><span class="ar">اطلب عرضًا</span><span class="en">Get a proposal</span></a>
+</nav>
 <script>
 (function(){
  var root=document.documentElement;
@@ -410,7 +553,8 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
  var routes=['home','services','how-it-works','reports','pricing','contact'];
  function route(){var h=(location.hash||'').slice(1);if(routes.indexOf(h)<0)h='home';
   document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-page')===h)});
-  document.querySelectorAll('[data-nav]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-nav')===h)});
+  document.querySelectorAll('[data-nav]').forEach(function(a){var on=a.getAttribute('data-nav')===h;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  root.classList.toggle('on-contact',h==='contact');
   window.scrollTo(0,0);}
  window.addEventListener('hashchange',route);route();
  var TB=document.getElementById('theme'),MQ=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):null;
@@ -418,17 +562,43 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
  TB.addEventListener('click',function(){theme(root.getAttribute('data-theme')==='dark'?'light':'dark',true)});
  if(MQ&&MQ.addEventListener)MQ.addEventListener('change',function(e){var sv;try{sv=localStorage.getItem('abc-theme')}catch(x){}if(!sv)theme(e.matches?'dark':'light')});
  theme(root.getAttribute('data-theme')||'light');
+ (function(){var cells=[].slice.call(document.querySelectorAll('.sl[data-n]')).sort(function(a,b){return a.dataset.n-b.dataset.n});
+  var K=document.getElementById('bk'),T=document.getElementById('tk'),TK=document.querySelector('.ticker');if(!cells.length||!K)return;
+  var D=[['أسنان','Dental'],['جلدية','Dermatology'],['أطفال','Paediatrics']];
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,n=+K.textContent;
+  function book(c){c.classList.add('b');K.textContent=++n;var d=D[+c.dataset.doc];
+   T.innerHTML='<span class="ar">'+d[0]+'، الساعة '+c.dataset.t+'</span><span class="en">'+d[1]+', '+c.dataset.t+'</span>';TK.classList.add('done')}
+  if(reduce){cells.forEach(book);return}
+  var i=0;setTimeout(function step(){if(i>=cells.length)return;var c=cells[i++];TK.classList.remove('done');TK.classList.remove('live');void TK.offsetWidth;TK.classList.add('live');
+   setTimeout(function(){c.classList.add('flash');setTimeout(function(){c.classList.remove('flash');book(c);setTimeout(step,900)},550)},700)},900);
+ })();
+ (function(){var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sel='.head,.card,.plan,.flow .step,.stat,.ms,.note,details,.video-box,.band,.fine,.pbx-h';
+  var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.closest('.hero')});
+  if(reduce||!('IntersectionObserver' in window))return;
+  els.forEach(function(e){var p=e.parentElement,i=[].indexOf.call(p.children,e);e.style.setProperty('--d',Math.min(i,6)*0.07+'s');e.classList.add('rv')});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);
+   if(x.target.classList.contains('stat'))count(x.target.querySelector('.num'))}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+  function count(el){if(!el)return;var t=el.childNodes.length===1&&el.firstChild.nodeType===3?el.firstChild:null;if(!t)return;var m=t.nodeValue.match(/^(\d+)(.*)$/);if(!m)return;
+   var to=+m[1],suf=m[2],st=null;function f(ts){if(!st)st=ts;var k=Math.min((ts-st)/900,1);k=1-Math.pow(1-k,3);t.nodeValue=Math.round(to*k)+suf;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+ })();
  document.getElementById('lang').addEventListener('click',function(){set(root.getAttribute('data-lang')==='ar'?'en':'ar')});
  var F=document.getElementById('f'),FB=document.getElementById('fb'),OK=document.getElementById('fm-ok'),ER=document.getElementById('fm-err');
  F.addEventListener('submit',function(e){e.preventDefault();
   if(F.botcheck.checked)return;
-  OK.style.display='none';ER.style.display='none';FB.disabled=true;FB.style.opacity=.6;
+  var bad=[];[n,c].forEach(function(x){var ok=x.value.trim().length>1;x.setAttribute('aria-invalid',ok?'false':'true');if(!ok)bad.push(x)});
+  var ph=p.value.replace(/[\s-]/g,''),pok=/^\+?\d{5,}$/.test(ph);p.setAttribute('aria-invalid',pok?'false':'true');if(!pok)bad.push(p);
+  if(bad.length){bad[0].focus();return}
+  OK.style.display='none';ER.style.display='none';FB.disabled=true;FB.style.opacity=.6;FB.setAttribute('aria-busy','true');
+  var lbl=FB.innerHTML;FB.innerHTML='<span class="ar">جارٍ الإرسال…</span><span class="en">Sending…</span>';
   var d={access_key:'3d77f104-4ad4-476a-adfc-faa171b4af4e',subject:'طلب عرض جديد من الموقع – '+c.value,from_name:'ABCenter Website',
    'الاسم':n.value,'المنشأة':c.value,'الجوال':p.value,'عدد المكالمات اليومية':v.value||'-','لغة الصفحة':root.getAttribute('data-lang')};
   fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(d)})
-   .then(function(r){return r.json()}).then(function(j){if(j&&j.success){OK.style.display='block';F.reset()}else{ER.style.display='block'}})
+   .then(function(r){return r.json()}).then(function(j){if(j&&j.success){OK.style.display='block';F.reset();OK.focus()}else{ER.style.display='block'}})
    .catch(function(){ER.style.display='block'})
-   .then(function(){FB.disabled=false;FB.style.opacity=1});});
+   .then(function(){FB.disabled=false;FB.style.opacity=1;FB.removeAttribute('aria-busy');FB.innerHTML=lbl});});
+ [n,c,p].forEach(function(x){x.addEventListener('input',function(){if(x.getAttribute('aria-invalid')==='true')x.setAttribute('aria-invalid','false')})});
 })();
 </script>
 </body>
