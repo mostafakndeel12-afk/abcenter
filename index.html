@@ -369,7 +369,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
 </div></section>
 <section class="alt video-sec"><div class="wrap">
  <div class="head" style="text-align:center;margin-bottom:32px"><p class="eyebrow"><span class="ar">رحلة المريض</span><span class="en">The patient journey</span></p><h2><span class="ar">من المكالمة إلى الموعد، خطوة بخطوة</span><span class="en">From the call to the appointment, step by step</span></h2></div>
- <div class="video-box"><video src="abcenter-patient-journey.mp4" poster="abcenter-patient-journey-poster.jpg" controls playsinline preload="metadata"></video></div>
+ <div class="video-box"><video id="pjv" src="abcenter-patient-journey.mp4" poster="abcenter-patient-journey-poster.jpg" data-ar="abcenter-patient-journey.mp4" data-en="abcenter-patient-journey-en.mp4" data-ar-poster="abcenter-patient-journey-poster.jpg" data-en-poster="abcenter-patient-journey-poster-en.jpg" controls playsinline preload="metadata"></video></div>
 </div></section>
 <section class="dark" aria-labelledby="sla-h"><div class="wrap">
  <div class="head"><p class="eyebrow"><span class="ar">التزاماتنا</span><span class="en">Our commitments</span></p><h2 id="sla-h"><span class="ar">خمسة مؤشرات نُحاسَب عليها في كل تقرير</span><span class="en">Five numbers we answer for in every report</span></h2></div>
@@ -546,6 +546,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column}
 (function(){
  var root=document.documentElement;
  function set(l){root.setAttribute('data-lang',l);root.lang=l;root.dir=l==='ar'?'rtl':'ltr';
+  var V=document.getElementById('pjv');if(V&&V.getAttribute('src')!==V.dataset[l]){V.pause();V.setAttribute('poster',V.dataset[l+'Poster']);V.setAttribute('src',V.dataset[l]);V.load()}
   document.title=l==='ar'?'ABCenter – مركز حجز المواعيد':'ABCenter – Appointment Booking Center';
   try{localStorage.setItem('abc-lang',l)}catch(e){}}
  var start='ar';try{start=localStorage.getItem('abc-lang')||'ar'}catch(e){}
